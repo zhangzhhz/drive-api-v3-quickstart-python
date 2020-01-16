@@ -1,0 +1,11 @@
+google.drive*
+
+token.pickle
+
+.vscode/
+
+venv/
+virtualenv/
+.venv/
+.virtualenv/
+
