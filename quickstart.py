@@ -1,3 +1,4 @@
+import sys
 import pickle
 import os.path
 from googleapiclient.discovery import build
@@ -29,6 +30,9 @@ def main():
         # Save the credentials for the next run
         with open('token.pickle', 'wb') as token:
             pickle.dump(creds, token)
+
+    if not creds:
+        sys.exit('Login is not sucessful.')
 
     service = build('drive', 'v3', credentials=creds)
 
